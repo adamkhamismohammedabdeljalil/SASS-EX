@@ -1,0 +1,70 @@
+//varibales
+$container-border-color:red;
+$element-border-color:green;
+$article-color-red:red;
+$article-color-blue:blue;
+$header-color:green;
+$border-style-solid:solid;
+$font-size:1rem;
+//mixin for the font-size, border-color, border-width and border-style
+@mixin article-border-styling($border-style, $border-color, $border-width, $font-size){
+   border-style: $border-style-solid;
+    border-color: $border-color;
+    border-width:$border-width;
+    font-size: $font-size;
+}
+
+//mixin for the color property
+@mixin color($color){
+    color:$color;
+}
+
+.container{
+    width: 98vw;
+    height: 60vh;
+    margin: 0 auto;
+    text-align: center;
+    @include article-border-styling(solid,red, 2px,1rem);
+    h1{
+        @include color($header-color);
+        text-decoration: underline ;
+        text-decoration-color: $article-color-blue;
+    }
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        padding: 20px;
+        margin: 50px 10px 0px 10px;
+        article{
+            font-size: 1rem;
+            border-right: 1px solid $element-border-color;
+            @include article-border-styling(solid, green, 1px,1rem);
+            .p1, .p3{
+                @include color($article-color-blue);
+                padding: 10px;
+                
+            }
+            .p2, .p4{
+                @include color($article-color-blue);
+                padding: 10px;
+            }
+
+        }
+        
+
+    }
+    .wrapper-2{
+        @include article-border-styling(solid, blue, 1px,1rem);
+        margin: 0 30px;
+        .p-section-2{
+            @include color($element-border-color);
+            font-size: 24px;
+            padding: 20px;
+            margin-left: 10px;
+        
+        }        
+    }
+
+} 
