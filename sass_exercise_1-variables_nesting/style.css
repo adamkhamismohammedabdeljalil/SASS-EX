@@ -1,0 +1,33 @@
+.container {
+  width: 98vw;
+  height: 35vh;
+  border: 2px solid red;
+  margin: 0 auto;
+  text-align: center;
+}
+.container h1 {
+  color: green;
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+.container .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 50px 10px 0px 10px;
+}
+.container .wrapper article {
+  border-right: 1px solid green;
+  border: 1px solid green;
+}
+.container .wrapper article .p1, .container .wrapper article .p3 {
+  color: blue;
+  padding: 10px;
+}
+.container .wrapper article .p2, .container .wrapper article .p4 {
+  color: red;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

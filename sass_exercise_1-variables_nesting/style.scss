@@ -1,0 +1,48 @@
+$container-border-color:red;
+$element-border-color:green;
+$article-color-red:red;
+$article-color-blue:blue;
+$header-color:green;
+
+
+.container{
+    width: 98vw;
+    height: 35vh;
+    border: 2px solid $container-border-color;
+    margin: 0 auto;
+    text-align: center;
+    h1{
+        color: $header-color;
+        text-decoration: underline ;
+        text-decoration-color: $article-color-blue;
+    }
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        padding: 20px;
+        margin: 50px 10px 0px 10px;
+        article{
+            border-right: 1px solid $element-border-color;
+            border: 1px solid $element-border-color;
+            .p1, .p3{
+                color:$article-color-blue;
+                padding: 10px;
+                
+            }
+            .p2, .p4{
+                color:$article-color-red;
+                padding: 10px;
+            }
+
+        }
+        
+
+    }
+
+} 
+
+
+
+
