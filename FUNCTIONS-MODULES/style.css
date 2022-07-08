@@ -1,0 +1,53 @@
+.container {
+  width: 98vw;
+  height: 60vh;
+  margin: 0 auto;
+  text-align: center;
+  border-color: red;
+  border-style: solid;
+  border-width: 0.125rem;
+  font-size: 1rem;
+}
+.container h1 {
+  color: green;
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+.container .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+  margin: 3.125rem 0.625rem 0 0.625rem;
+}
+.container .wrapper article {
+  font-size: 1rem;
+  border-right: 0.0625rem solid green;
+  border-color: green;
+  border-style: solid;
+  border-width: 0.0625rem;
+  font-size: 1rem;
+}
+.container .wrapper article .p1, .container .wrapper article .p3 {
+  color: red;
+  padding: 0.625rem;
+}
+.container .wrapper article .p2, .container .wrapper article .p4 {
+  color: blue;
+  padding: 0.625rem;
+}
+.container .wrapper-2 {
+  border-style: solid;
+  border-width: 1px;
+  font-size: 1rem;
+  border-color: blue;
+  margin: 0 1.875rem;
+}
+.container .wrapper-2 .p-section-2 {
+  color: green;
+  font-size: 1.5rem;
+  padding: 1.25rem;
+  margin-left: 0.625rem;
+}
+
+/*# sourceMappingURL=style.css.map */
