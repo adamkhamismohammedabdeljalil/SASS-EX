@@ -2,10 +2,7 @@
 @use 'base';
 @use 'function';
 // a function to convert px to rem;
-@function px-to-rem($value-in-px){
-    @return calc(($value-in-px/16)*1rem);
 
-}
 //mixin for the font-size, border-color, border-width and border-style
 @mixin article-border-styling($border-style, $border-width, $font-size){
     border-style: base.$border-style-solid;
@@ -25,7 +22,7 @@
     margin: 0 auto;
     text-align: center;
     border-color: red;
-    @include article-border-styling(solid,px-to-rem(2),1rem);
+    @include article-border-styling(solid,function.px-to-rem(2),1rem);
     h1{
         @include color(base.$header-color);
         text-decoration: underline ;
@@ -36,21 +33,21 @@
         justify-content: center;
         align-items: center;
         
-        padding: px-to-rem(20);
+        padding: function.px-to-rem(20);
         margin: px-to-rem(50) px-to-rem(10) 0 px-to-rem(10);
         article{
             font-size: 1rem;
-            border-right: px-to-rem(1) solid base.$element-border-color;
+            border-right: function.px-to-rem(1) solid base.$element-border-color;
             border-color: green;
-            @include article-border-styling(solid,px-to-rem(1),1rem);
+            @include article-border-styling(solid,function.px-to-rem(1),1rem);
             .p1, .p3{
                 @include color(base.$article-color-red);
-                padding: px-to-rem(10);
+                padding: function.px-to-rem(10);
                 
             }
             .p2, .p4{
                 @include color(base.$article-color-blue);
-                padding: px-to-rem(10);
+                padding: function.px-to-rem(10);
             }
 
         }
@@ -60,12 +57,12 @@
     .wrapper-2{
         @include article-border-styling(solid,1px,1rem);
         border-color: blue;
-        margin: 0 px-to-rem(30);
+        margin: 0 function.px-to-rem(30);
         .p-section-2{
             @include color(base.$element-border-color);
-            font-size: px-to-rem(24);
-            padding: px-to-rem(20);
-            margin-left: px-to-rem(10);
+            font-size: function.px-to-rem(24);
+            padding: function.px-to-rem(20);
+            margin-left: function.px-to-rem(10);
             
         
         }        
