@@ -1,0 +1,114 @@
+$text-color-blue:blue;
+$text-color-red:red;
+$border-color-blue:blue;
+$border-color-red:red;
+$text-color-green:green;
+$i:1;
+
+//font-sizes map 
+$fontSizes:(
+    1rem:1rem,
+    2rem:2rem,
+    3rem:3rem,
+);
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    width: 97vw;
+    height: 70vh;
+    border: 2px solid $border-color-red;
+    margin:0 auto;
+    padding: 20px 0;
+    @include flex-column();
+    h1{
+        color: $text-color-green;
+        border-bottom: 2px solid $border-color-blue;
+    }
+    h2{
+        border: 2px solid $text-color-red;
+        padding: 10px;
+        font-size: 30px;
+        color: $text-color-green;
+    }
+
+   @include flex-column();
+   .articles-2{
+    border: 2px solid $border-color-blue;
+    width: 87vw;
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+    color: $text-color-green;
+    font-size: 25px;
+    
+   }
+   .articles-1{
+    width: 92%;
+    & article p{
+        color: $text-color-blue;
+        border: 2px solid $border-color-blue;
+        padding: 10px;
+        
+
+        
+    }
+    .odd{
+        color: $text-color-blue;
+    }
+    .even{
+        color: $text-color-red;
+    }
+    @include flex-row()
+    
+   }
+   .boxes{
+    width: 92%;
+    @include flex-row();
+    justify-content: space-between;
+    & div{
+        width: 45px;
+        height: 45px;
+        border: 1px solid $border-color-red;
+        
+        
+        
+        
+    }
+    
+   }
+   
+  
+    
+}
+@for $i from 1 through 19{
+    @if $i==10{
+        .box1:nth-child(#{$i}){
+            background-color: blue;
+            color: red;
+            font-size: 2rem;
+        }
+    }
+    @else{
+    .box1:nth-child(#{$i}){
+        background-color: darken(#fff,5*$i);
+        color: lighten(#000,5*$i);
+    }
+}
+@each $class, $fontSize in $fontSizes{
+    .fs-#{$class}{
+        font-size: $fontSize;
+    }
+}
+}
