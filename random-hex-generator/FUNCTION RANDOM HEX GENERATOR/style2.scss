@@ -1,0 +1,33 @@
+
+@use "sass:string";
+
+@function random-hex() {
+    $value: '#';
+
+    @for $i from 1 through 6 {
+        $temp:floor(random()*16);
+        @if ($temp > 9){
+            $over:"ABCDEF";
+            $temp: calc($temp - 9);
+            $temp: string.slice($over, $temp, $temp);
+        }
+        $value: $value + $temp;
+    }
+    @return string.unquote($value);
+}
+
+
+.circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    
+    @for $i from 1 through 6 {
+        &:nth-child(#{$i}){
+            background-color:random-hex();
+            
+        }
+        
+    }
+
+}

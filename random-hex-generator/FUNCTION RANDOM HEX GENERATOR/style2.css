@@ -1,0 +1,25 @@
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.circle:nth-child(1) {
+  background-color: #804AD1;
+}
+.circle:nth-child(2) {
+  background-color: #A17B34;
+}
+.circle:nth-child(3) {
+  background-color: #1448E0;
+}
+.circle:nth-child(4) {
+  background-color: #AFAF9A;
+}
+.circle:nth-child(5) {
+  background-color: #56516B;
+}
+.circle:nth-child(6) {
+  background-color: #A11ED8;
+}
+
+/*# sourceMappingURL=style2.css.map */
